@@ -1,5 +1,9 @@
 # gtAI_pkg
 
+**To estimate the tRNA adaptation index (tAI) using a genetic algorthim.**
+
+For more information about tAI.
+
 ## Python Support
 
 Python >=3.7 is required.
