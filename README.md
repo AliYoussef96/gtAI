@@ -72,6 +72,7 @@ Just install python3 and download the package using pip.
 pip install gtAI_pkg
 ```
 Download this zip file, uncompress it and run the script named gtAI_GUI.py by any way you would like.
+
 Run it on any operating system and enjoy easily using our package.
 
 ## Citation
