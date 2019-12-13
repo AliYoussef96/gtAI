@@ -46,20 +46,33 @@ Where:
 
 ```python
 
-        main_fasta (str): A main fasta file contains genes want to be analyzed (CDS)
-        GtRNA (dict): the tRNA genes count
-        ref_fasta (str): A reference genes with the highest gene expression in a genome (CDS)
-        genetic_code_number (int): default = 1, The Genetic Codes number described by NCBI (https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi)
-        size_pop (int): A parameter for the genetic algorithm to identify the population size containing the possible solutions to optimize Sij-values
-        generation_number (int): A parameter for the genetic algorithm to identify the generation number
-        bacteria (bool): True If the tested organism is prokaryotic or archaea, else equal to False ( default = False )
+main_fasta (str): A main fasta file contains genes want to be analyzed (CDS)
+GtRNA (dict): the tRNA genes count
+ref_fasta (str): A reference genes with the highest gene expression in a genome (CDS)
+genetic_code_number (int): default = 1, The Genetic Codes number described by NCBI (https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi)
+size_pop (int): A parameter for the genetic algorithm to identify the population size containing the possible solutions to optimize Sij-values
+generation_number (int): A parameter for the genetic algorithm to identify the generation number
+bacteria (bool): True If the tested organism is prokaryotic or archaea, else equal to False ( default = False )
 
 
 ```
 Returns:
 
 ```python
-     df_tai (dataframe): Contains each gene id and its gtAI value 
-     final_dict_wi (dict): Contains each codon and its absolute adaptiveness value
-     rel_values (dict): Contains each codon and its relative adaptiveness values
+df_tai (dataframe): Contains each gene id and its gtAI value 
+final_dict_wi (dict): Contains each codon and its absolute adaptiveness value
+rel_values (dict): Contains each codon and its relative adaptiveness values
 ```
+## Easy use
+
+We provide easy GUI software to run this package.
+
+Just install python3 and download the package using pip.
+```python
+pip install gtAI_pkg
+```
+Download this zip file, uncompress it and run the script named gtAI_GUI.py by any way you would like.
+Run it on any operating system and enjoy easily using our package.
+
+## Citation
+
