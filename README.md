@@ -1,6 +1,6 @@
 # gtAI_pkg
 
-**To estimate the tRNA adaptation index (tAI) using a genetic algorthim.**
+**To estimate the tRNA adaptation index (tAI).**
 
 For more information about tAI.
 
