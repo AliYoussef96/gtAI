@@ -71,12 +71,15 @@ rel_values (dict): Contains each codon and its relative adaptiveness values
 
 We provide easy GUI software to run this package.
 
-Just install python3 and download the package using pip.
+Just install python3 and download the tool using pip.
 ```python
-pip install gtAI_pkg
+pip install gtAI_GUI
 ```
-Download this zip file, uncompress it and run the script named gtAI_GUI.py by any way you would like.
-
+And run:
+```python
+from gtAI_GUI import run
+run(gtAI)
+```
 Run it on any operating system and enjoy easily using our package.
 
 ## Citation
