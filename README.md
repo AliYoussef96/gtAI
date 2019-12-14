@@ -2,7 +2,7 @@
 
 **To estimate the tRNA adaptation index (tAI).**
 
-For more information about tAI.
+For more information about [tAI]().
 
 ## Python Support
 
@@ -67,6 +67,10 @@ df_tai (dataframe): Contains each gene id and its gtAI value
 final_dict_wi (dict): Contains each codon and its absolute adaptiveness value
 rel_values (dict): Contains each codon and its relative adaptiveness values
 ```
+## API Documentation
+
+You can access the API documentation from here: [gtAI_pkg]()
+
 ## Easy use
 
 We provide easy GUI software to run this package.
@@ -81,6 +85,10 @@ from gtAI_GUI import run
 run(gtAI)
 ```
 Run it on any operating system and enjoy easily using our package.
+
+## GUI Documentation
+
+Download the GUI documentation from here: [gtAI_GUI]()
 
 ## Citation
 
