@@ -1,8 +1,8 @@
-# gtAI
+# Global tRNA Adaptation index (gtAI)
 
 **To estimate the tRNA adaptation index (tAI).**
 
-For more information about [tAI]().
+For more information about the tAI: [Mario dos Reis et. al.,](https://academic.oup.com/nar/article/32/17/5036/1333956).
 
 ## Python Support
 
