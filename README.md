@@ -22,8 +22,6 @@ Python >=3.7 is required.
 
 6. CAI
 
-7. scipy
-
 ## Installation Instructions
 
 **Using pip**
