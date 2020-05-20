@@ -2,7 +2,9 @@
 
 **To estimate the tRNA adaptation index (tAI).**
 
-For more information about the tAI: [Mario dos Reis et. al.,](https://academic.oup.com/nar/article/32/17/5036/1333956).
+- For more information about the gtAI: 
+
+- For more information about the tAI: [Mario dos Reis et. al.,](https://academic.oup.com/nar/article/32/17/5036/1333956).
 
 ## Python Support
 
