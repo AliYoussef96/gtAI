@@ -16,11 +16,9 @@ Python >=3.7 is required.
 
 2. pandas
 
-3. urllib
+3. numpy
 
-4. numpy
-
-5. gaft
+4. gaft
 
 ## Installation Instructions
 
