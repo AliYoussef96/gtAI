@@ -71,6 +71,20 @@ rel_values (dict): Contains each codon and its relative adaptiveness values
 
 ## Example
 
+1- Import gtAI functions.
+
+```python
+
+from gtAI import Run_gtAI
+from gtAI import gtAI 
+```
+
+2- Prepare the tRNA gene copy number of the tested genome.
+
+User has two options;  a) input the tRNA gene copy number as python dictionary or, b) using GtRNAdb() function the user can get it automatic from GtRNA database using the link to the tested genome.
+
+In this example, the second option (b) will be used.
+
 
 ## API Documentation
 
