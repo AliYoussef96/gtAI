@@ -77,7 +77,7 @@ from gtAI import Run_gtAI
 from gtAI import gtAI 
 ```
 
-2- In this example, we will use [Ecoli]() as our tested organism.
+2- In this example, we will use [Saccharomyces cerevisiae S288C](https://www.ncbi.nlm.nih.gov/genome/browse/#!/eukaryotes/15/Saccharomyces%20cerevisiae%20S288c) as our tested organism.
 
 3- Prepare the tRNA gene copy number of the tested genome.
 
@@ -87,9 +87,9 @@ In this example, the second option (b) will be used.
 
 ```python
 
-url_GtRNAdb = "http://gtrnadb.ucsc.edu/genomes/bacteria/Esch_coli_K_12_MG1655/"
+url_GtRNAdb = "http://gtrnadb.ucsc.edu/genomes/eukaryota/Scere3/"
 #### From GtRNAdb
-GtRNA = gtAI.GtRNAdb(url_GtRNAdb, 1)
+GtRNA = gtAI.GtRNAdb(url_GtRNAdb, 2)
 
 ```
 
