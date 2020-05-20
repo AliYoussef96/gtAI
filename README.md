@@ -85,6 +85,10 @@ User has two options;  a) input the tRNA gene copy number as python dictionary o
 
 In this example, the second option (b) will be used.
 
+```python
+```
+
+for more infromation about GtRNAdb() as will as tRNADB_CE(), [API documentation]()
 
 ## API Documentation
 
