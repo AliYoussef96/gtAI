@@ -110,7 +110,7 @@ for for more infromation about gtai_analysis() and the parameters; [API document
 5- Run gtAI.
 
 ```python
-df_tai , final_dict_wi, rel_values = Run_gtAI.gtai_analysis(main_fasta,GtRNA,genetic_code_number,bacteria=bacteria, size_pop=60,generation_number=100)
+df_tai , final_dict_wi, rel_values = Run_gtAI.gtai_analysis(main_fasta,GtRNA,genetic_code_number,bacteria=bacteria, size_pop=size_pop,generation_number=generation_number)
 ```
 
 Returns:
