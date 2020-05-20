@@ -1,4 +1,4 @@
-# gtAI_pkg
+# gtAI
 
 **To estimate the tRNA adaptation index (tAI).**
 
