@@ -81,7 +81,7 @@ from gtAI import gtAI
 
 3- Prepare the tRNA gene copy number of the tested genome.
 
-User has two options;  a) input the tRNA gene copy number as python dictionary or, b) using GtRNAdb() function the user can get it automatic from GtRNA database using the link to the tested genome.
+User has two options;  a) input the tRNA gene copy number as python dictionary or, b) using GtRNAdb() function, the user can get it automatic from GtRNA database, using the link to the tested genome (In our case Saccharomyces cerevisiae S288C).
 
 In this example, the second option (b) will be used.
 
