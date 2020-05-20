@@ -20,6 +20,8 @@ Python >=3.7 is required.
 
 4. numpy
 
+5. gaft
+
 ## Installation Instructions
 
 **Using pip**
