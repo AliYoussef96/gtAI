@@ -32,6 +32,8 @@ pip install gtAI
 
 ## Contribution Guidelines
 
+Contributions to the software are welcome
+
 For bugs and suggestions, the most effective way is by raising an issue on the github issue tracker. 
 Github allows you to classify your issues so that we know if it is a bug report, feature request or feedback to the authors.
 
@@ -65,6 +67,12 @@ df_tai (dataframe): Contains each gene id and its gtAI value
 final_dict_wi (dict): Contains each codon and its absolute adaptiveness value
 rel_values (dict): Contains each codon and its relative adaptiveness values
 ```
+
+## Output
+
+## Example
+
+
 ## API Documentation
 
 You can access the API documentation from here: [gtAI Documentation]()
