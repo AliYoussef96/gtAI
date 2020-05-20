@@ -77,7 +77,7 @@ from gtAI import Run_gtAI
 from gtAI import gtAI 
 ```
 
-2- In this example, we will use [Ecoli]() as our tested organisms.
+2- In this example, we will use [Ecoli]() as our tested organism.
 
 3- Prepare the tRNA gene copy number of the tested genome.
 
