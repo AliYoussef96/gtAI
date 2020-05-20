@@ -42,7 +42,7 @@ How to create a Pull Request? [documentation on pull requests](https://help.gith
 
 ```python
 from gtAI import Run_gtAI
-df_tai ,dict_wi,rel_values = Run_gtAI.gtai_analysis(main_fasta, GtRNA, genetic_code_number, size_pop, generation_number=50, bacteria=False)
+df_tai, dict_wi, rel_values = Run_gtAI.gtai_analysis(main_fasta, GtRNA, genetic_code_number, size_pop, generation_number=50, bacteria=False)
 ```
 
 Where:
