@@ -1,4 +1,4 @@
-# Global tRNA Adaptation index (gtAI)
+# Genetic tRNA Adaptation index (gtAI)
 
 **To estimate the tRNA adaptation index (tAI).**
 
