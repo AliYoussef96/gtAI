@@ -27,7 +27,7 @@ Python >=3.7 is required.
 **Using pip**
 
 ```python
-pip install gtAI_pkg
+pip install gtAI
 ```
 
 ## Contribution Guidelines
