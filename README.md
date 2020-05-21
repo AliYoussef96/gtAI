@@ -1,5 +1,7 @@
 # Genetic tRNA Adaptation index (gtAI)
 
+[![](https://img.shields.io/badge/doi-https%3A%2F%2Fdoi.org%2F10.1016%2Fj.jprot.2019.103613-red)]()
+
 **To estimate the tRNA adaptation index (tAI).**
 
 - For more information about the gtAI: 
