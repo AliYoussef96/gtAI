@@ -6,13 +6,30 @@
 Welcome to gtAI's documentation!
 ================================
 
+Guide
+^^^^^
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-    gtAI
+	:maxdepth: 2
 
+	
+	Introduction
+	description
+	Dependencies
+	Installation
+	Example
+	Contribution
+	Citation
+	Help
+	
 
+API
+^^^
+.. toctree::
+	:maxdepth: 2
 
+	gtAI
+	
+	
 Indices and tables
 ==================
 
