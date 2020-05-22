@@ -12,7 +12,7 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../gtAI'))
+sys.path.insert(0, os.path.abspath(r'../../gtAI'))
 
 
 # -- Project information -----------------------------------------------------
@@ -50,7 +50,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'nature'
+html_theme = 'sphinx_rtd_theme'
 
 # Sort members by type
 autodoc_member_order = 'groupwise'

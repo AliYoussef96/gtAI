@@ -17,9 +17,12 @@ Guide
 	Dependencies
 	Installation
 	Example
+	equations
 	Contribution
 	Citation
+	LICENSE
 	Help
+	ref
 	
 
 API
