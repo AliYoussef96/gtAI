@@ -51,13 +51,13 @@ Where:
 
 ```python
 
-main_fasta (str): A main fasta file contains genes want to be analyzed (CDS)
-GtRNA (dict): the tRNA genes count
-ref_fasta (str): A reference genes with the highest gene expression in a genome (CDS)
+main_fasta (str): A main fasta file containing the genes to be analyzed.
+GtRNA (dict): The tRNA genes count
+ref_fasta (str): Reference genes with the highest gene expression in a genome.
 genetic_code_number (int): default = 1, The Genetic Codes number described by NCBI (https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi)
-size_pop (int): A parameter for the genetic algorithm to identify the population size containing the possible solutions to optimize Sij-values
-generation_number (int): A parameter for the genetic algorithm to identify the generation number
-bacteria (bool): True If the tested organism is prokaryotic or archaea, else equal to False ( default = False )
+size_pop (int): A parameter for the genetic algorithm to identify the population size containing the possible solutions to optimize Sij-values. (default = 60)
+generation_number (int): A parameter for the genetic algorithm to identify the generation number. (default = 100)
+bacteria (bool): True If the tested organism is prokaryotic or archaeans, else equal to False (default = False)
 
 
 ```
