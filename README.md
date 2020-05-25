@@ -67,9 +67,9 @@ bacteria (bool): True If the tested organism is prokaryotic or archaeans, else e
 Returns:
 
 ```
-df_tai (dataframe): Contains each gene id and its gtAI value 
-final_dict_wi (dict): Contains each codon and its absolute adaptiveness value
-rel_values (dict): Contains each codon and its relative adaptiveness values
+df_tai (dataframe): Contains each gene id and its gtAI value.
+final_dict_wi (dict): Contains each codon and its absolute adaptiveness value.
+rel_values (dict): Contains each codon and its relative adaptiveness values.
 ```
 
 ## Example
