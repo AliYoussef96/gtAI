@@ -44,7 +44,7 @@ How to create a Pull Request? [documentation on pull requests](https://help.gith
 
 ```python
 from gtAI import Run_gtAI
-df_tai, dict_wi, rel_values = Run_gtAI.gtai_analysis(main_fasta, GtRNA, genetic_code_number, size_pop, generation_number=50, bacteria=False)
+df_tai, dict_wi, rel_values = Run_gtAI.gtai_analysis(main_fasta, GtRNA, genetic_code_number, size_pop, generation_number=50, ref_fasta= ref_fasta, bacteria=False)
 ```
 
 Where:
@@ -61,6 +61,9 @@ bacteria (bool): True If the tested organism is prokaryotic or archaea, else equ
 
 
 ```
+
+**Note: for ref_fasta parameter, if a reference set of highly expressed genes is present (fasta formate) you can insert it. If not, the package will automatically generate a reference set based on ENc values. For more information: [API documentation]().
+
 Returns:
 
 ```python
