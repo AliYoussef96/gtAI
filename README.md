@@ -49,7 +49,7 @@ df_tai, dict_wi, rel_values = Run_gtAI.gtai_analysis(main_fasta, GtRNA, genetic_
 
 Where:
 
-```python
+```
 
 main_fasta (str): A main fasta file containing the genes to be analyzed.
 GtRNA (dict): The tRNA genes count
@@ -66,7 +66,7 @@ bacteria (bool): True If the tested organism is prokaryotic or archaeans, else e
 
 Returns:
 
-```python
+```
 df_tai (dataframe): Contains each gene id and its gtAI value 
 final_dict_wi (dict): Contains each codon and its absolute adaptiveness value
 rel_values (dict): Contains each codon and its relative adaptiveness values
