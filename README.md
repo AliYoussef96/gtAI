@@ -62,7 +62,7 @@ bacteria (bool): True If the tested organism is prokaryotic or archaeans, else e
 
 ```
 
-**Note: for ref_fasta parameter, if a reference set of highly expressed genes is present (fasta formate) you can insert it. If not, the package will automatically generate a reference set based on ENc values. For more information: [API documentation]().**
+**Note: for ref_fasta parameter, the user is able to use a reference set of interest (in fasta format). Otherwise, the package will automatically generate a reference set based on the ENc values of the tested genome. For more information: [API documentation]().**
 
 Returns:
 
