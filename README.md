@@ -86,7 +86,7 @@ from gtAI import gtAI
 
 3- Prepare the tRNA gene copy number of the tested genome.
 
-User has two options;  a) input the tRNA gene copy number as python dictionary or, b) using GtRNAdb() function, the user can get it automatic from GtRNA database, using the link to the tested genome (In our case Saccharomyces cerevisiae S288C).
+User has two options;  a) input the tRNA gene copy number as python dictionary or, b) using GtRNAdb() function, the user can get it automatically from the GtRNA database, using the link to the tested genome (In our case Saccharomyces cerevisiae S288C).
 
 In this example, the second option (b) will be used.
 
@@ -98,9 +98,9 @@ GtRNA = gtAI.GtRNAdb(url_GtRNAdb, 2)
 
 ```
 
-for more infromation about GtRNAdb() as will as tRNADB_CE(); [API documentation]().
+for more infromation about GtRNAdb() as well as tRNADB_CE(); [API documentation]().
 
-4- Parameters setting for gtai_analysis() function.
+4- Parameter settings for gtai_analysis() function.
 
 ```python
 genetic_code_number = 1
@@ -110,7 +110,7 @@ size_pop = 60
 generation_number = 100
 ```
 
-for more infromation about gtai_analysis() and the parameters; [API documentation]().
+for more information about gtai_analysis() and the parameters; [API documentation]().
 
 5- Run gtAI.
 
