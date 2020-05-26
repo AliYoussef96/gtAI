@@ -9,7 +9,7 @@ Example
 	
 	from gtAI import gtAI 
 	
-2- In this example, we will use [Saccharomyces cerevisiae S288C](https://www.ncbi.nlm.nih.gov/genome/browse/#!/eukaryotes/15/Saccharomyces%20cerevisiae%20S288c) coding sequences.
+2- In this example, we will use `Saccharomyces cerevisiae S288C <https://www.ncbi.nlm.nih.gov/genome/browse/#!/eukaryotes/15/Saccharomyces%20cerevisiae%20S288c>`_ coding sequences.
 
 3- Prepare the tRNA gene copy number of the tested genome.
 
