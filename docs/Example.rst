@@ -9,15 +9,11 @@ Example
 	
 	from gtAI import gtAI 
 	
-2- In this example, we will use `Saccharomyces cerevisiae S288C <https://www.ncbi.nlm.nih.gov/genome/browse/#!/eukaryotes/15/Saccharomyces%20cerevisiae%20S288c>`_ coding sequences.
+2- In this example, we will use [Saccharomyces cerevisiae S288C](https://www.ncbi.nlm.nih.gov/genome/browse/#!/eukaryotes/15/Saccharomyces%20cerevisiae%20S288c) coding sequences.
 
 3- Prepare the tRNA gene copy number of the tested genome.
 
-User has two options;  
-
-a) input the tRNA gene copy number as python dictionary or, 
-
-b) using GtRNAdb() function, the user can get it automatic from GtRNA database, using the link to the tested genome (In our case Saccharomyces cerevisiae S288C).
+User has two options;  a) input the tRNA gene copy number as python dictionary or, b) using GtRNAdb() function, the user can get it automatically from the GtRNA database, using the link to the tested genome (In our case Saccharomyces cerevisiae S288C).
 
 In this example, the second option (b) will be used.
 
@@ -29,9 +25,9 @@ In this example, the second option (b) will be used.
 	
 	GtRNA = gtAI.GtRNAdb(url_GtRNAdb, 2)
 
-**for more infromation about GtRNAdb() as will as tRNADB_CE(); go to gtAI package part.**
+**for more infromation about GtRNAdb() as well as tRNADB_CE(); [API documentation]().**
 
-4- Parameters setting for gtai_analysis() function.
+4- Parameter settings for gtai_analysis() function.
 
 .. code-block:: python
 
