@@ -2,7 +2,7 @@ Installation guide
 ===================
 
 
-**gtAI available on:**
+**gtAI is available on:**
 
 - GitHub: https://github.com/AliYoussef96/gtAI
 
