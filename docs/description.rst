@@ -1,5 +1,6 @@
 gtAI Workflow
-=================
+==============
+
 
 1) A reference set is obtained by taking 5% (or more) of coding sequences from a tested genome with the lowest ENc values (equation 3). (Or insert a reference set of interest)
 
