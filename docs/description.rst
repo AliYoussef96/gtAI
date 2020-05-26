@@ -1,15 +1,12 @@
-gtAI Description
+gtAI Workflow
 =================
 
-gtAI based on the optimization of Sij-values weights (equation 1) and relative codon synonymous usage (RSCU) values (equation 4).
+1) A reference set is obtained by taking 5% (or more) of coding sequences from a tested genome with the lowest ENc values (equation 3). (Or insert a reference set of interest)
 
-The workflow to calculate gtAI:
+2) Then, RSCU values for the reference set are generated (equation 4).
 
+3) The genetic algorithm will search for the Sij-values that maximizes the correlation between (equation 1) and (equation 4).
 
-1) Obtain a reference set by taking 5% (or more) of coding sequences from a tested genome, with the lowest effective number of codons values  (ENc) (equation 5).
+4) The gtAI weights (Wi) are calculated based on the optimized Sij-values from step 3.
 
-2) Codons RSCU measured for this set of genes. 
-
-3) The genetic algorithm used to search for the Sij-values that maximize the correlation between equation (1) and equation (4).
-
-4) The gtAI calculated based on the optimized Sij-values from step 3.
+5) The weights are then normalized (wi), and gtAI for a coding sequence (g) is estimated using the (equation 3).
