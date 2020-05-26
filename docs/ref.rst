@@ -9,4 +9,4 @@ References
 
 4. Sharp PM, Li W. Codon Adaptation Index and its potential applications Nucleic Acids Research. 1987;15: 1281–1295.
 
-5. Sun X, Yang Q, Xia X. An improved implementation of effective number of codons (Nc). Mol Biol Evol. 2013;30: 191–196.  https://doi:10.1093/molbev/mss201
+5. Sun X, Yang Q, Xia X. An improved implementation of effective number of codons (Nc). Mol Biol Evol. 2013;30: 191–196.  https://doi.10.1093/molbev/mss201
