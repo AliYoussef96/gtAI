@@ -3,7 +3,6 @@
 
 import new_flow
 import bygaft
-from CAI import CAI
 from Bio import SeqIO
 import gtAI
 import pandas as pd 
