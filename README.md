@@ -1,6 +1,7 @@
 # Genetic tRNA Adaptation index (gtAI)
 
 [![](https://img.shields.io/badge/doi-https%3A%2F%2Fdoi.org%2F10.1016%2Fj.jprot.2019.103613-red)]()
+[![Documentation Status](https://readthedocs.org/projects/gtai/badge/?version=latest)](https://gtai.readthedocs.io/en/latest/?badge=latest)
 
 **gtAI is a new package implemented in python to effectively estimate the tRNA adaptation index (tAI).**
 
