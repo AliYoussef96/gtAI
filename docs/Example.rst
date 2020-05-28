@@ -25,7 +25,7 @@ In this example, the second option (b) will be used.
 	
 	GtRNA = gtAI.GtRNAdb(url_GtRNAdb, 2)
 
-**for more infromation about GtRNAdb() as well as tRNADB_CE(); go to gtAI package part.**
+**for more infromation about GtRNAdb() as well as tRNADB_CE(); go to API part.**
 
 4- Parameter settings for gtai_analysis() function.
 
@@ -37,7 +37,7 @@ In this example, the second option (b) will be used.
 	size_pop = 60
 	generation_number = 100
 
-**for more infromation about gtai_analysis() and the parameters; go to gtAI package part.**
+**for more infromation about gtai_analysis() and the parameters; go to API part.**
 
 
 5- Run gtAI.
