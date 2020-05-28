@@ -44,7 +44,7 @@ templates_path = ['_templates']
 exclude_patterns = []
 
 
-autodoc_mock_imports = ["Bio", "pandas]
+autodoc_mock_imports = ["Bio", "pandas"]
 
 # -- Options for HTML output -------------------------------------------------
 
