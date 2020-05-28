@@ -6,7 +6,7 @@ Installation guide
 
 - GitHub: https://github.com/AliYoussef96/gtAI
 
-- PYPI: 
+- PYPI: https://pypi.org/project/gtAI/
 
 **Installation using pip**
 
