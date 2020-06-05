@@ -63,7 +63,7 @@ bacteria (bool): True If the tested organism is prokaryotic or archaeans, else e
 
 ```
 
-**Note: for ref_fasta parameter, the user is able to use a reference set of interest (in fasta format). Otherwise, the package will automatically generate a reference set based on the ENc values of the tested genome. For more information: [API documentation]().**
+**Note: for ref_fasta parameter, the user is able to use a reference set of interest (in fasta format). Otherwise, the package will automatically generate a reference set based on the ENc values of the tested genome. For more information: [API documentation](https://gtai.readthedocs.io/en/latest/?badge=latest).**
 
 Returns:
 
@@ -99,7 +99,7 @@ GtRNA = gtAI.GtRNAdb(url_GtRNAdb, 2)
 
 ```
 
-for more infromation about GtRNAdb() as well as tRNADB_CE(); [API documentation]().
+for more infromation about GtRNAdb() as well as tRNADB_CE(); [API documentation](https://gtai.readthedocs.io/en/latest/?badge=latest).
 
 4- Parameter settings for gtai_analysis() function.
 
@@ -111,7 +111,7 @@ size_pop = 60
 generation_number = 100
 ```
 
-for more information about gtai_analysis() and the parameters; [API documentation]().
+for more information about gtai_analysis() and the parameters; [API documentation](https://gtai.readthedocs.io/en/latest/?badge=latest).
 
 5- Run gtAI.
 
@@ -140,7 +140,7 @@ df_tai.to_csv("test.csv", header=True)
 
 ## API Documentation
 
-You can access the API documentation from here: [gtAI Documentation]()
+You can access the API documentation from here: [gtAI Documentation](https://gtai.readthedocs.io/en/latest/?badge=latest)
 
 
 ## Citation
