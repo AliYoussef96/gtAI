@@ -65,6 +65,9 @@ bacteria (bool): True If the tested organism is prokaryotic or archaeans, else e
 
 **Note: for ref_fasta parameter, the user is able to use a reference set of interest (in fasta format). Otherwise, the package will automatically generate a reference set based on the ENc values of the tested genome. For more information: [API documentation](https://gtai.readthedocs.io/en/latest/?badge=latest).**
 
+
+**Note: Population size must be an even number**
+
 Returns:
 
 ```
