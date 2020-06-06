@@ -52,7 +52,7 @@ autodoc_mock_imports = ["Bio", "pandas", "numpy", "gaft"]
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'bizstyle'
+html_theme = 'nature'
 
 
 # Sort members by type
