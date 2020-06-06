@@ -80,14 +80,13 @@ def tRNADB_CE(url):
               #########################
 ########################################################
 
-def GtRNAdb(url,start_from_table):
+def GtRNAdb(url):
     """
         Get the tRNA genes count from GtRNAdb database
 
     Args:
 
         url (string): a url to anticodon table for organism from GtRNAdb database (http://gtrnadb.ucsc.edu/)
-        start_from_table (int): a number indicates where the anticodon table starts on the GtRNAdb page
 
     Returns:
 
@@ -101,106 +100,90 @@ def GtRNAdb(url,start_from_table):
 
         #example 1
 
-        > GtRNAdb("http://gtrnadb.ucsc.edu/genomes/eukaryota/Hsapi19/",start_from_table = 3)
-        # Return an anticodon table of Homo sapiens (GRCh37/hg19)
-        # Since there are 7 tables ( see: http://gtrnadb.ucsc.edu/genomes/eukaryota/Hsapi19/ ) 
-        # So start_from_table parameter should be the number where the table of the actual count of anticodons starts.
-        #Here its table number 3 (start from 0) ( so, start_from_table = 3 )
-
-        #example 2
-
-        > GtRNAdb("http://gtrnadb.ucsc.edu/genomes/eukaryota/Scere3/",start_from_table = 2)
-        # Return an anticodon table of Saccharomyces cerevisiae S288c
-        # Since there are 6 tables ( see: http://gtrnadb.ucsc.edu/genomes/eukaryota/Scere3/ ) 
-        # So start_from_table parameter should be the number where the table of the actual count of anticodons starts.
-        #Here its table number 2 (start from 0) ( so, start_from_table = 2 )
-
-        #example 3
-
-        > GtRNAdb("http://gtrnadb.ucsc.edu/genomes/bacteria/Esch_coli_K_12_MG1655/",start_from_table = 1)
-        # Return an anticodon table of Escherichia coli str. K-12 substr. MG1655
-        # Since there are 5 tables ( see: http://gtrnadb.ucsc.edu/genomes/bacteria/Esch_coli_K_12_MG1655/ ) 
-        # So start_from_table parameter should be the number where the table of the actual count of anticodons starts.
-        #Here its table number 1 (start from 0) ( so, start_from_table = 1 )
-
+        > GtRNAdb("http://gtrnadb.ucsc.edu/genomes/eukaryota/Hsapi19/")
+      
     """
 
-    if start_from_table == 1 or start_from_table == 2 or start_from_table == 3:
-        pass
-    else:
-        raise TypeError ("start_from_table should by 1 or 2 or 3 ")
+    amino_acid_list = ['Val', 'Ile', 'Leu', 'Glu', 'Gln', 'Asp', 'Asn', 'His', 'Trp', 'Phe', 'Tyr', 'Arg', 'Lys', 'Ser', 'Thr', 'Met', 'Ala', 'Gly', 'Pro', 'Cys']
+
+    for start_from_table in range(1,4):
+
+        if "gtrnadb.ucsc.edu" not in url:
+            raise ValueError ("url is not includes in GtRNAdb database")
+
+        tables = pd.read_html(url)
+        anti_codon_dict = {}
+
+        def SPLIT(x):
+            return x.split(" ")
+
+        A_to_I_anticodon = ["AGA","AAG","AGG","ACG","AAU","AGU","AAC","AGC","ACC"]  #codons which will convert its A to I in Wobble pos.
+        cat_anti_codon = ()
+        for i in range(start_from_table,len(tables)):
+            tables_new = tables[i]
+        
+            for j in range(0, len(tables_new.index)):
+                overview = tables_new.iloc[j,1:] 
+                codon_anticodon = list ( map(str, overview) )    
+                codon_anticodon = list ( map(SPLIT, codon_anticodon) ) 
+                
+                #anti_codon with A that will convert to I
+                for i_codon in codon_anticodon:
+                    if not i_codon[0].isdigit() and i_codon[0] != "&nbsp":
+                        i_codon_rna = i_codon[0].replace("T","U")
+                        if i_codon_rna in A_to_I_anticodon:
+                            i_codon_rna = list(i_codon_rna)
+                            i_codon_rna[0] = "I"
+                            i_codon_rna = "".join(i_codon_rna)
+
+                        try:
+                            if i_codon_rna == "CAU" and "/" in i_codon[1]:
+                                cat_anti_codon = cat_anti_codon + ( i_codon[1].split("/")[0] , )
+                                cat_anti_codon = cat_anti_codon + ( i_codon[1].split("/")[1] , )
+                            if i_codon_rna == "CAU" and "/" not in i_codon[1]:
+                                cat_anti_codon = cat_anti_codon + ( i_codon[1] ,)
+                            
+                            
+                            
+                            anti_codon_dict[i_codon_rna] = int(i_codon[1])
+
+                        except:
+                            anti_codon_dict[i_codon_rna] = 0
+
+        def seeifnumber(x):
+            # take list and return a tuble with only number element
+            result = ()
+            for i in x:
+                try:
+                    int(i)
+                    result = result + (int(i),)
+                except:
+                    pass
+            return (result)
 
 
-    if "gtrnadb.ucsc.edu" not in url:
-        raise ValueError ("url is not includes in GtRNAdb database")
+        try:
+            anti_codon_dict["CAU"] = sum(seeifnumber(cat_anti_codon))
+        except:
+            pass
 
-    tables = pd.read_html(url)
-    anti_codon_dict = {}
+        dict_anti_codons = {}
+        
+        #remove anti_codons with A in the first postion # caz it not recognize ani codon
+        for i_anticodon in list(anti_codon_dict.keys()):
+            if i_anticodon[0] == "A":
+                del anti_codon_dict[i_anticodon]
 
-    def SPLIT(x):
-        return x.split(" ")
-
-    A_to_I_anticodon = ["AGA","AAG","AGG","ACG","AAU","AGU","AAC","AGC","ACC"]  #codons which will convert its A to I in Wobble pos.
-    cat_anti_codon = ()
-    for i in range(start_from_table,len(tables)):
-        tables_new = tables[i]
-    
-        for j in range(0, len(tables_new.index)):
-            overview = tables_new.iloc[j,1:] 
-            codon_anticodon = list ( map(str, overview) )    
-            codon_anticodon = list ( map(SPLIT, codon_anticodon) ) 
-              
-            #anti_codon with A that will convert to I
-            for i_codon in codon_anticodon:
-                if not i_codon[0].isdigit() and i_codon[0] != "&nbsp":
-                    i_codon_rna = i_codon[0].replace("T","U")
-                    if i_codon_rna in A_to_I_anticodon:
-                        i_codon_rna = list(i_codon_rna)
-                        i_codon_rna[0] = "I"
-                        i_codon_rna = "".join(i_codon_rna)
-
-                    try:
-                        if i_codon_rna == "CAU" and "/" in i_codon[1]:
-                            cat_anti_codon = cat_anti_codon + ( i_codon[1].split("/")[0] , )
-                            cat_anti_codon = cat_anti_codon + ( i_codon[1].split("/")[1] , )
-                        if i_codon_rna == "CAU" and "/" not in i_codon[1]:
-                            cat_anti_codon = cat_anti_codon + ( i_codon[1] ,)
-                        
-                        
-                        
-                        anti_codon_dict[i_codon_rna] = int(i_codon[1])
-
-                    except:
-                        anti_codon_dict[i_codon_rna] = 0
-
-    def seeifnumber(x):
-        # take list and return a tuble with only number element
-        result = ()
-        for i in x:
-            try:
-                int(i)
-                result = result + (int(i),)
-            except:
+        if len(anti_codon_dict) == 0:
+            raise ValueError ("No tables were found in this URL")
+        else:
+            see = sum([1 for i in amino_acid_list if i in anti_codon_dict])
+            if see == 0:           
+                 #if len(anti_codon_dict) == 58 or len(anti_codon_dict) == 57:
+                return anti_codon_dict
+                break
+            else:
                 pass
-        return (result)
-
-
-    try:
-        anti_codon_dict["CAU"] = sum(seeifnumber(cat_anti_codon))
-    except:
-        pass
-
-    dict_anti_codons = {}
-    
-    #remove anti_codons with A in the first postion # caz it not recognize ani codon
-    for i_anticodon in list(anti_codon_dict.keys()):
-        if i_anticodon[0] == "A":
-            del anti_codon_dict[i_anticodon]
-
-    if len(anti_codon_dict) == 0:
-        raise ValueError ("No tables were found in this URL")
-    else:
-        return anti_codon_dict
 
 ########################################################
               #########################
