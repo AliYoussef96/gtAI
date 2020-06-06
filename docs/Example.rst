@@ -14,6 +14,7 @@ Example
 3- Prepare the tRNA gene copy number of the tested genome.
 
 The user has two options;  a) input the tRNA gene copy number as python dictionary or, b) using GtRNAdb() function, the user can get it automatically from the GtRNA database, using the link to the tested genome (In our case Saccharomyces cerevisiae S288C).
+Or by tRNADB_CE() function to get the tRNA gene copy number from tRNADB_CE database using also the link to the tested genome.
 
 In this example, the second option (b) will be used.
 
@@ -23,7 +24,7 @@ In this example, the second option (b) will be used.
 	
 	#### From GtRNAdb
 	
-	GtRNA = gtAI.GtRNAdb(url_GtRNAdb, 2)
+	GtRNA = gtAI.GtRNAdb(url_GtRNAdb)
 
 **for more infromation about GtRNAdb() as well as tRNADB_CE(); go to API part.**
 
