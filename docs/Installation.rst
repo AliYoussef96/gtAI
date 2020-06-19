@@ -13,3 +13,6 @@ Installation guide
 .. code-block:: python
 
 	pip install gtAI
+
+**A graphical user interface (GUI) version is available (only for windows 10 users).
+For more information on how to install and how to use it, please see the documentation: [GUI documentation]().**
