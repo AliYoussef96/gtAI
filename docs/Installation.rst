@@ -14,5 +14,7 @@ Installation guide
 
 	pip install gtAI
 
-** A graphical user interface (GUI) version is available (only for windows 10 users).
-For more information on how to install and how to use it, please see the documentation: `GUI documentation <https://github.com/AliYoussef96/gtAI/edit/master/docs/Installation.rst>`_  **
+**Note:**
+
+A graphical user interface (GUI) version is available (only for windows 10 users).
+For more information on how to install and how to use it, please see the documentation: `GUI documentation <https://github.com/AliYoussef96/gtAI/edit/master/docs/Installation.rst>`_
