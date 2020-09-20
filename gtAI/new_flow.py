@@ -27,6 +27,28 @@ def ENc_calc(fasta_file):
     Enc_low_values = Enc_file.nsmallest(Enc_low_values, 'eq5sun')
 
     return Enc_low_values
+
+
+def ENc_calc_ref(fasta_file):
+    #######################################################################
+    #calculate the Enc values for all genes
+    ###############################
+
+    ENc.ENcfilename(fasta_file)
+
+    Enc_file = pd.read_csv(fasta_file + ".enc", delimiter="\t")
+
+
+    #get the 5% of lwo enc values ( high CUB )
+    Enc_low_values = round(math.floor(len(Enc_file) * (100/100)),0)
+
+    if Enc_low_values <= 0:
+        Enc_low_values = 1
+    else:
+        pass
+    Enc_low_values = Enc_file.nsmallest(Enc_low_values, 'eq5sun')
+
+    return Enc_low_values
 ###########################################################################
 ###########################################################################
 
