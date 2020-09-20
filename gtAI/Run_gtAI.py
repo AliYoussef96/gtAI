@@ -35,11 +35,20 @@ def gtai_analysis(main_fasta, GtRNA, genetic_code_number=11, size_pop=60, genera
     """
 
 
-    # 1- Calculate the ENc values, and extract the reference set of genes.
-    Enc_low_values = new_flow.ENc_calc(main_fasta)
 
-    # 2- Calculate the RSCU values for the reference set.
-    RSCU_values = new_flow.RSCU_calc(main_fasta,Enc_low_values,genetic_code_number)
+    if ref_fasta == "":
+        # 1- Calculate the ENc values, and extract the reference set of genes.
+        Enc_low_values = new_flow.ENc_calc(main_fasta)
+
+        # 2- Calculate the RSCU values for the reference set.
+        RSCU_values = new_flow.RSCU_calc(main_fasta,Enc_low_values,genetic_code_number)
+    
+    elif ref_fasta != "":
+         # 1- Calculate the ENc values, and extract the reference set of genes.
+        Enc_low_values = new_flow.ENc_calc_ref(ref_fasta)
+
+        # 2- Calculate the RSCU values for the reference set.
+        RSCU_values = new_flow.RSCU_calc(ref_fasta,Enc_low_values,genetic_code_number)
     
     #3- Optimize Sij-values.
     bygaft.gene_algo_corr(dict_tGCN=GtRNA , genetic_code_number = genetic_code_number, RSCU_df=RSCU_values, size_pop=size_pop, generation_number=generation_number, bacteria=bacteria )
