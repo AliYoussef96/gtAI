@@ -111,11 +111,13 @@ for more infromation about GtRNAdb() as well as tRNADB_CE(); [API documentation]
 4- Parameter settings for gtai_analysis() function.
 
 ```python
+main_fasta = "SC.fasta"
 genetic_code_number = 1
 ref_fasta = ""
 bacteria = False
 size_pop = 60
 generation_number = 100
+
 ```
 
 for more information about gtai_analysis() and the parameters; [API documentation](https://gtai.readthedocs.io/en/latest/?badge=latest).
@@ -123,8 +125,9 @@ for more information about gtai_analysis() and the parameters; [API documentatio
 5- Run gtAI.
 
 ```python
-df_tai , final_dict_wi, rel_values = Run_gtAI.gtai_analysis(main_fasta,GtRNA,genetic_code_number,bacteria=bacteria, size_pop=size_pop,generation_number=generation_number)
-```
+df_tai , final_dict_wi, rel_values = Run_gtAI.gtai_analysis(main_fasta = main_fasta,
+                                                      GtRNA = GtRNA ,genetic_code_number = genetic_code_number, ref_fasta = ref_fasta,
+                                                      bacteria=bacteria, size_pop=size_pop,generation_number=generation_number)```
 
 Returns:
 
