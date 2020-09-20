@@ -9,7 +9,7 @@ import pandas as pd
 from pandas import DataFrame
 #from scipy import stats
 
-def gtai_analysis(main_fasta, GtRNA, genetic_code_number=11, size_pop=60, generation_number=100, bacteria=True):
+def gtai_analysis(main_fasta, GtRNA, ref_fasta = "", genetic_code_number=11, size_pop=60, generation_number=100, bacteria=True):
     """
 
     Args:
