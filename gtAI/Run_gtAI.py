@@ -1,10 +1,10 @@
 #Note it will not take genes with N,R,Y,M,k,S,W in the analysis
 #################################################################
 
-import new_flow
-import bygaft
+from gtAI import new_flow
+from gtAI import bygaft
 from Bio import SeqIO
-import gtAI
+from gtAI import gtAI
 import pandas as pd 
 from pandas import DataFrame
 #from scipy import stats

@@ -14,8 +14,7 @@ def RSCU(allseq,allseq_name,The_Genetic_Codes_number):
     from Bio.Data import CodonTable
     from Bio.Seq import Seq
     import re
-    from Bio.Alphabet import generic_dna
-    import pandas as pd
+    import pandas
     from pandas import DataFrame
     from itertools import tee
 
@@ -36,7 +35,7 @@ def RSCU(allseq,allseq_name,The_Genetic_Codes_number):
 
     qcodontable = ( i for i in qcodontable)
     dic2 = {}
-    allseqstr2 = Seq('', generic_dna)
+    allseqstr2 = Seq('')
     for i in allseqstr:
         allseqstr2 += i
     aminoacid2 = allseqstr2.translate(table = The_Genetic_Codes_number , stop_symbol ='')
@@ -55,7 +54,7 @@ def RSCU(allseq,allseq_name,The_Genetic_Codes_number):
             except ZeroDivisionError:
                 pass
 
-    df = pd.DataFrame(index=pd.Series([i for i in RSCUall]))
+    df = pandas.DataFrame(index=pandas.Series([i for i in RSCUall]))
     df[allseq_name] = [RSCUall[r] for r in RSCUall ]
     df.drop(['ATG'],0,inplace= True)
     df.sort_index(inplace=True)

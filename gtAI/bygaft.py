@@ -34,7 +34,7 @@ def gene_algo_corr(dict_tGCN,genetic_code_number,RSCU_df,bacteria, size_pop,gene
     @engine.fitness_register
     #@engine.minimize
     def fitness(indv):
-        import new_flow 
+        from gtAI import new_flow 
 
         xug, xci, xai, xgu, xal = indv.solution
 

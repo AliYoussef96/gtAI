@@ -1,11 +1,11 @@
-import ENc
+from gtAI import ENc
 from Bio import SeqIO
 import pandas as pd 
 from pandas import DataFrame
 from pathlib import Path 
 import math
-import CA_RSCU  
-import gtAI
+from gtAI import CA_RSCU  
+from gtAI import gtAI
 
 def ENc_calc(fasta_file):
     #######################################################################
