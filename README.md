@@ -22,6 +22,8 @@ Python >=3.7 is required.
 
 4. gaft
 
+5. lxml 
+
 ## Installation Instructions
 
 **Using pip**
