@@ -4,7 +4,7 @@
 
 **gtAI is a new package implemented in python to effectively estimate the tRNA adaptation index (tAI).**
 
-- For more information about the gtAI: https://doi.org/10.1016/j.csbj.2021.12.025 
+- For more information about the gtAI:
 
 ## Python Support
 
