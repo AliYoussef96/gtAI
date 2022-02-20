@@ -153,4 +153,4 @@ You can access the API documentation from here: [gtAI Documentation](https://gta
 
 ## Citation
 
-https://doi.org/10.1016/j.csbj.2021.12.025
+
