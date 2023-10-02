@@ -122,8 +122,8 @@ for more information about gtai_analysis() and the parameters; [API documentatio
 
 ```python
 df_tai , final_dict_wi, rel_values = Run_gtAI.gtai_analysis(main_fasta = main_fasta,
-                                                      GtRNA = GtRNA ,genetic_code_number = genetic_code_number, ref_fasta = ref_fasta,
-                                                      bacteria=bacteria, size_pop=size_pop,generation_number=generation_number)
+                                                      GtRNA = GtRNA , ref_fasta = ref_fasta, genetic_code_number = genetic_code_number,
+                                                      size_pop=size_pop, generation_number=generation_number, bacteria=bacteria )
                                                       
 ```
 
