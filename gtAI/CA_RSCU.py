@@ -56,6 +56,6 @@ def RSCU(allseq,allseq_name,The_Genetic_Codes_number):
 
     df = pandas.DataFrame(index=pandas.Series([i for i in RSCUall]))
     df[allseq_name] = [RSCUall[r] for r in RSCUall ]
-    df.drop(['ATG'],0,inplace= True)
+    df.drop(['ATG'],axis=0,inplace= True)
     df.sort_index(inplace=True)
     return df
