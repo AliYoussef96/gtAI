@@ -1,6 +1,5 @@
 def ENcfilename(file):
     import sys
-    import argparse
     from Bio import SeqIO
     from pathlib import Path
 
@@ -8,19 +7,6 @@ def ENcfilename(file):
     file_out_put = file + ".enc"
 
 
-
-    parser = argparse.ArgumentParser(usage='%(prog)s [options]',
-                                     description='Extracts codonusage from CDS input FASTA file. Output will be raw codon counts (.codoncnt), global ACTG counts (.actgcnt), first (.firstcnt), second (.secondcnt), third (.third) codon position counts and Relative Synonymous Codon Usage (.rscucnt). Optional different methods can be applied to calculate Effective Number of Codons (.enc).')
-    parser.add_argument("-v", "--verbose", help="increase output verbosity", action="store_true")
-    parser.add_argument('-i', help='specify CDS input file in FASTA format' , default = None)
-    parser.add_argument('-o', help='specify output prefix',default = None)
-    parser.add_argument('-r', action='store_true',
-                        help='specify if CDS sequences with length modulo 3 unequal to 0 should be removed and reported to std.out')
-    parser.add_argument('-enc', choices=['eq4Wright', 'eq2Sun', 'eq5Sun', 'all'], default = "eq5Sun",
-                        help='specify equation to calculate ENC. Either equation (4) [eq4Wright] of (Wright. (1990) Gene 87:23-29) or equation (2) [eq2Sun] or equation (5) [eq5Sun] of (Sun et al. (2012) Mol. Biol. Evol. 30:191-196) or [all].')
-    parser.add_argument('-six2fourtwo', default='False', choices=['True', 'False'],
-                        help='specify if sixfold codons should be grouped into one fourfold and one twofold group [default: False]. This will only affect calculation of ENC values.')
-    args = parser.parse_args()
 
 ############
     infile = file
@@ -30,10 +16,13 @@ def ENcfilename(file):
     outfile_enc = file_out_put 
 ############
 
-    six2fourtwo = 'False'
-    if args.six2fourtwo == 'True':
+    six2fourtwo_args = 'False'
+    enc_args = "eq5Sun"
+    r_args = False
+
+    if six2fourtwo_args == 'True':
         six2fourtwo = True
-    if args.six2fourtwo == 'False':
+    if six2fourtwo_args == 'False':
         six2fourtwo = False
     codontable = codontable1
     if six2fourtwo:
@@ -50,15 +39,15 @@ def ENcfilename(file):
     global_rscu = codontable()
     ids_mo3 = []
 
-    if args.enc is not None:
+    if enc_args is not None:
         enchandle = open(outfile_enc, "w")
-        if args.enc == 'eq4Wright':
+        if enc_args == 'eq4Wright':
             enchandle.write("id\tlen\tmo3\teq4Wright\n")
-        if args.enc == 'eq2Sun':
+        if enc_args == 'eq2Sun':
             enchandle.write("id\tlen\tmo3\teq2Sun\n")
-        if args.enc == 'eq5Sun':
+        if enc_args == 'eq5Sun':
             enchandle.write("id\tlen\tmo3\teq5sun\n")
-        if args.enc == 'all':
+        if enc_args == 'all':
             enchandle.write("id\tlen\tmo3\teq4Wright\teq2Sun\teq5Sun\n")
 
         c = 0
@@ -77,7 +66,7 @@ def ENcfilename(file):
                 tmp_mo3 = 1
                 cmo3 += 1
                 ids_mo3.append(tmp_id)
-                if args.r:
+                if r_args:
                     continue
             for i in range(0, len(record), 3):
                 codon = str(record[i:i + 3].seq)
@@ -105,26 +94,26 @@ def ENcfilename(file):
                     tmp_second['X'][1] += 1
                     global_third['X'][1] += 1
                     tmp_third['X'][1] += 1
-            if args.enc is not None:
+            if enc_args is not None:
                 tmp_enc = {}
                 tmp_gcbypos = gcbypos(tmp_counts, six2fourtwo)
-                if args.enc == 'eq4Wright':
+                if enc_args == 'eq4Wright':
                     enchandle.write(tmp_id + "\t" + str(tmp_len) + "\t" + str(tmp_mo3) + "\t" + str(
                         calc_eq4wright(tmp_gcbypos[2])) + "\n")
-                if args.enc == 'eq2Sun':
+                if enc_args == 'eq2Sun':
                     enchandle.write(tmp_id + "\t" + str(tmp_len) + "\t" + str(tmp_mo3) + "\t" + str(
                         calc_eq2sun(tmp_counts, six2fourtwo)) + "\n")
-                if args.enc == 'eq5Sun':
+                if enc_args == 'eq5Sun':
                     enchandle.write(tmp_id + "\t" + str(tmp_len) + "\t" + str(tmp_mo3) + "\t" + str(
                         calc_eq5sun(tmp_counts, six2fourtwo)) + "\n")
-                if args.enc == 'all':
+                if enc_args == 'all':
                     enchandle.write(tmp_id + "\t" + str(tmp_len) + "\t" + str(tmp_mo3) + "\t" + str(
                         calc_eq4wright(tmp_gcbypos[2])) + "\t" + str(
                         calc_eq2sun(tmp_counts, six2fourtwo)) + "\t" + str(
                         calc_eq5sun(tmp_counts, six2fourtwo)) + "\n")
 
     print("finished writing")
-    if args.r:
+    if r_args:
         print ('\n'.join(ids_mo3))
 
 
